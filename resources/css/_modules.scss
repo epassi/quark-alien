@@ -1,0 +1,85 @@
+// $numFrames: 1; // still
+// $numFrames: 12; // walking
+// $numFrames: 19; // firing
+
+$frameBaseSize: 10rem; // multiple of 10
+
+// $scale: 1; // leave this alone for now
+
+// $frameRate: 5; // fps
+// $frameRate: 20; // fps
+// $frameRate: 40; // fps
+// $frameRate: 60; // fps
+
+// $duration: 3000ms;
+// $duration: $numFrames / $frameRate * 1s;
+
+.alien-layer {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.alien {
+	margin-top: 40.0rem;
+
+	.jump-layer {
+		width: $frameBaseSize;
+		height: $frameBaseSize;
+		margin: 0 auto;
+		background: url(../img/alien-sprite.svg) no-repeat;
+		background-size: cover;
+
+		// animation: walk $duration steps($numFrames) infinite;
+		// -webkit-animation: walk $duration steps($numFrames) infinite;
+
+		// animation-delay: 2s;
+		// -webkit-animation-delay: 2s;
+
+		// animation-fill-mode: forwards;
+		// -webkit-animation-fill-mode: forwards;
+	}
+}
+
+.alien.left {
+	transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+}
+
+.alien.right {
+	transform: scaleX(1);
+	-webkit-transform: scaleX(1);
+}
+
+.zap-zone {
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50.0rem;
+	background: #fff;
+}
+
+.ruler {
+	background: url(../img/ruler.svg) repeat-x;
+	height: 2.0rem;
+}
+
+.legend {
+	margin-top: 8.0rem;
+	text-align: center;
+	color: #999;
+
+	li {
+		display: inline-block;
+		margin: 1rem;
+	}
+}
+
+
+
+

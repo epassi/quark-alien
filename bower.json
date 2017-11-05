@@ -1,0 +1,12 @@
+{
+  "name": "prototype",
+  "description": "Web prototyping template.",
+  "version": "1.0.0",
+  "dependencies": {
+    "jquery": "latest"
+  },
+  "devDependencies": {
+    "gsap": "~1.18.2",
+    "Snap.svg": "~0.4.1"
+  }
+}
